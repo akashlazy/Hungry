@@ -10,8 +10,11 @@ class AddressCell: UITableViewCell, GMSMapViewDelegate {
     @IBOutlet weak var lblAddress: UILabel!
     @IBOutlet weak var googleMap: GMSMapView!
     @IBOutlet weak var satelliteBtn: UIButton!
+    @IBOutlet weak var openBtn: UIButton!
     
     var toggle: Bool = false
+    
+    var coordinate: CLLocationCoordinate2D! = nil
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -31,6 +34,7 @@ class AddressCell: UITableViewCell, GMSMapViewDelegate {
         googleMap!.mapType = .hybrid
         
         googleMap.bringSubviewToFront(satelliteBtn)
+        googleMap.bringSubviewToFront(openBtn)
     }
     
     @IBAction func satelliteButtonClick(_ sender: UIButton) {
@@ -46,6 +50,11 @@ class AddressCell: UITableViewCell, GMSMapViewDelegate {
             satelliteBtn.sizeToFit()
         }
     }
+    
+    @IBAction func openButtonClick(_ sender: UIButton) {
+        openGoogleMap(coordinate)
+    }
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
@@ -57,10 +66,7 @@ class AddressCell: UITableViewCell, GMSMapViewDelegate {
         
         let appPrefs = MySharedPreference()
         
-        appPrefs.setLatitude(21.1458)
-        appPrefs.setLatitude(79.0882)
-        
-        let coordinate = CLLocationCoordinate2D(latitude: appPrefs.getLatitude(), longitude: appPrefs.getLongitude())
+        coordinate = CLLocationCoordinate2D(latitude: appPrefs.getLatitude(), longitude: appPrefs.getLongitude())
         
         let camera: GMSCameraPosition = GMSCameraPosition.camera(withTarget: coordinate, zoom: 15)
         
@@ -69,6 +75,15 @@ class AddressCell: UITableViewCell, GMSMapViewDelegate {
         
         let marker = GMSMarker(position: coordinate)
         marker.map = self.googleMap
+    }
+    
+    private func openGoogleMap(_ place: CLLocationCoordinate2D) {
+        
+        if let url = URL(string: "comgooglemaps://?saddr=&daddr=\(place.latitude),\(place.longitude)&directionsmode=driving") {
+            UIApplication.shared.open(url, options: [:])
+        } else {
+            NSLog("Can't use comgooglemaps://");
+        }
     }
     
     func mapView(mapView: GMSMapView, didTapMarker marker: GMSMarker) -> Bool {

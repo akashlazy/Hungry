@@ -42,7 +42,7 @@ class DetailScreenVC: UIViewController, UITableViewDelegate, UITableViewDataSour
         let appPref = MySharedPreference()
         appPref.setRestaurantID(resID)
         
-//        ConnRequestManager().getRequest(Constant.Restaurant.methodRestaurant, classRef: self)
+        ConnRequestManager().getRequest(Constant.Restaurant.methodRestaurant, classRef: self)
  
     }
     
@@ -64,7 +64,7 @@ class DetailScreenVC: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func refreshData() {
-        
+        detailTableView.reloadData()
     }
     
     

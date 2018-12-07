@@ -26,6 +26,7 @@
 				<string>prefs</string>
 			</array>
 		</dict>
+		<dict/>
 	</array>
 	<key>CFBundleVersion</key>
 	<string>1</string>
@@ -57,5 +58,10 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>LSApplicationQueriesSchemes</key>
+	<dict>
+		<key>Item 0</key>
+		<string>comgooglemaps</string>
+	</dict>
 </dict>
 </plist>

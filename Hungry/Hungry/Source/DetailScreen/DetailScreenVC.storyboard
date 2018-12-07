@@ -94,6 +94,14 @@
                                                                 <action selector="satelliteButtonClick:" destination="JpI-RG-Xql" eventType="touchUpInside" id="8bI-5K-68G"/>
                                                             </connections>
                                                         </button>
+                                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fQf-YC-u7L">
+                                                            <rect key="frame" x="309" y="145" width="38" height="30"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <state key="normal" title="Open"/>
+                                                            <connections>
+                                                                <action selector="openButtonClick:" destination="JpI-RG-Xql" eventType="touchUpInside" id="cb0-h2-zHM"/>
+                                                            </connections>
+                                                        </button>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
@@ -110,6 +118,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="googleMap" destination="W69-s5-mLC" id="iDk-ob-u3z"/>
+                                            <outlet property="openBtn" destination="fQf-YC-u7L" id="SQB-ka-pqB"/>
                                             <outlet property="satelliteBtn" destination="45I-qt-12c" id="UjL-7x-UkE"/>
                                         </connections>
                                     </tableViewCell>

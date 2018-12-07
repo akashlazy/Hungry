@@ -301,7 +301,7 @@ extension ConnJsonCreator {
         database.closeDatabase()
     }
     
-    func storeDetailLocation(_ json: JSON, completionClosure: @escaping(_ dict: JSON) -> () )  {
+    func storeDetailLocation(_ json: JSON)  {
         let dict = json.dictionaryValue
         
         let appPrefs = MySharedPreference()
@@ -319,14 +319,8 @@ extension ConnJsonCreator {
         guard let longitude = loc["longitude"] else {
             return
         }
-        guard let address = loc["address"] else {
-            return
-        }
         
-        appPrefs.setLatitude(latitude.double!)
-        appPrefs.setLongitude(longitude.double!)
-        
-        
-        completionClosure(json)
+        appPrefs.setLatitude(Double(latitude.string!)!)
+        appPrefs.setLongitude(Double(longitude.string!)!)
     }
 }

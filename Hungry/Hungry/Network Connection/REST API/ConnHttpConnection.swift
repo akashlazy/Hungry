@@ -35,7 +35,7 @@ class ConnHttpConnection {
         } else if methodName == Constant.Location.methodLocations {
             json = ConnJsonCreator().putCollecionsJSON()
         } else if methodName == Constant.Restaurant.methodRestaurant {
-            json = ConnJsonCreator().putCollecionsJSON()
+            json = ConnJsonCreator().putRestaurantJSON()
         }
         
         
@@ -64,7 +64,7 @@ class ConnHttpConnection {
                     (self.classRefs as! MainViewController).refreshData()
                 }
             } else if methodName == Constant.Restaurant.methodRestaurant {
-                ConnJsonCreator().storeLocationGeocode(json)
+                ConnJsonCreator().storeDetailLocation(json)
                 
                 if classRefs.isKind(of: DetailScreenVC.self) {
                     (self.classRefs as! DetailScreenVC).refreshData()

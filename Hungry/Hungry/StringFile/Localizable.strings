@@ -1,0 +1,18 @@
+// Task
+"strAddTask" = "Add Task";
+"strTask" = "Select Tasks";
+"strTaskHint" = "Enter Task Name";
+
+// User
+"strAddUser" = "Add User";
+
+// Buttons
+"btnSetting" = "Settings";
+"btnCancel" = "Cancel";
+
+//
+"strSearch" = "Search Restaurant";
+
+// location
+"locTitle" = "Permission";
+"locMessage" = "Turn on Location Service from settings to Find out nearst Restaurant";

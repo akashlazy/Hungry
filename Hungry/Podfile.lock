@@ -1,0 +1,65 @@
+PODS:
+  - Alamofire (4.7.3)
+  - AsyncSwift (2.0.4)
+  - FMDB (2.7.5):
+    - FMDB/standard (= 2.7.5)
+  - FMDB/standard (2.7.5)
+  - GoogleMaps (2.7.0):
+    - GoogleMaps/Maps (= 2.7.0)
+  - GoogleMaps/Base (2.7.0)
+  - GoogleMaps/Maps (2.7.0):
+    - GoogleMaps/Base
+  - GooglePlacePicker (2.7.0):
+    - GoogleMaps (= 2.7.0)
+    - GooglePlaces (= 2.7.0)
+  - GooglePlaces (2.7.0):
+    - GoogleMaps/Base (= 2.7.0)
+  - Kingfisher (4.10.1)
+  - RKParallaxEffect (2.0.0)
+  - SwiftLocation (3.2.3):
+    - SwiftyJSON (~> 4.0.0-alpha.1)
+  - SwiftyJSON (4.0.0)
+  - Toast-Swift (4.0.0)
+
+DEPENDENCIES:
+  - Alamofire
+  - AsyncSwift
+  - FMDB
+  - GoogleMaps
+  - GooglePlacePicker
+  - GooglePlaces
+  - Kingfisher
+  - RKParallaxEffect
+  - SwiftLocation
+  - Toast-Swift
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - AsyncSwift
+    - FMDB
+    - GoogleMaps
+    - GooglePlacePicker
+    - GooglePlaces
+    - Kingfisher
+    - RKParallaxEffect
+    - SwiftLocation
+    - SwiftyJSON
+    - Toast-Swift
+
+SPEC CHECKSUMS:
+  Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
+  AsyncSwift: 65775a7b32e740609b24969ece3de58723b9dc3e
+  FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
+  GoogleMaps: f79af95cb24d869457b1f961c93d3ce8b2f3b848
+  GooglePlacePicker: 59ea44db173c58486ad6123993e81feefcbce9c3
+  GooglePlaces: 3d06e6c99654545b4738ce49648745779c25f2ef
+  Kingfisher: c148cd7b47ebde9989f6bc7c27dcaa79d81279a0
+  RKParallaxEffect: b49be3d5c88757f50004befb6be47d66959607d2
+  SwiftLocation: a3c3bc2023118171ef3572188a31def94aa0892c
+  SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
+  Toast-Swift: 594b5c5e5129f15438e410207e43287f027b3c00
+
+PODFILE CHECKSUM: cffd848769dc1ef0a2c81fa45dad2e27dec45d34
+
+COCOAPODS: 1.5.3
